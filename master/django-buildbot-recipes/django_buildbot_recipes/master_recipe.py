@@ -85,7 +85,7 @@ class Recipe(BaseRecipe):
                            for slave in slaves.splitlines()
                            if slave.strip() != ''])
         else:
-            slaves = []
+            slaves = {}
 
         parts_directory = join(self.buildout['buildout']['parts-directory'])
         for k in ( 'projects', 'pollers'):
